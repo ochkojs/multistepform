@@ -1,4 +1,4 @@
-export const InputForm = ({ label, isError, errorMessage, onClick }) => {
+export const InputForm = ({ label, isError, errorMessage, type }) => {
   return (
     <div className="">
       <div className="flex flex-col gap-2">
@@ -7,7 +7,7 @@ export const InputForm = ({ label, isError, errorMessage, onClick }) => {
           <span className="text-red-600 px-1">*</span>
         </div>
         <input
-          onClick={onClick}
+          type={type}
           className="w-full p-3 border-1 border-gray-400 outline-none rounded-xl text-4"
         ></input>
         <div>

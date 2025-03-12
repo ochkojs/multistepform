@@ -4,11 +4,7 @@ import { BackButton } from "../ui/BackButton";
 import { NextButton } from "../ui/NextButton";
 
 export const Footer = ({}) => {
-  function onHandle() {
-    const [stepCount, setStepCount] = useState(1);
-    setStepCount = (stepCount) => stepCount + 1;
-    console.log("working");
-  }
+  const stepCount = 1;
   return (
     <div>
       {stepCount > 1 ? (
@@ -18,7 +14,7 @@ export const Footer = ({}) => {
         </div>
       ) : (
         <div>
-          <NextButton onClick={onHandle} />
+          <NextButton />
         </div>
       )}
     </div>
