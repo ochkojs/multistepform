@@ -10,7 +10,7 @@ export const InfoStep = ({}) => {
       />
       <InputForm
         label="Phone number"
-        isError={false}
+        isError={true}
         errorMessage="please enter a valid phone number"
       />
       <InputForm
