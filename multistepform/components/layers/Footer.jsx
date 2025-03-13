@@ -3,8 +3,7 @@
 import { BackButton } from "../ui/BackButton";
 import { NextButton } from "../ui/NextButton";
 
-export const Footer = ({}) => {
-  const stepCount = 1;
+export const Footer = ({ stepCount }) => {
   return (
     <div>
       {stepCount > 1 ? (
