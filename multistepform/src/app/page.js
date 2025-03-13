@@ -1,13 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { Footer, Header } from "../../components/layers";
-import { InputForm } from "../../components/ui";
-import { InfoStep, LastStep, NameStep } from "../../components/steps";
+import { Footer, Header } from "../components/layers";
+import { InfoStep, LastStep, NameStep } from "../components/steps";
 
 export default function Home() {
-  const [stepCount, SetStepCount] = useState(0);
-  const CurrentStep = [NameStep, InfoStep, LastStep][0];
+  const [stepCount, setStepCount] = useState(0);
+  const CurrentStep = [NameStep, InfoStep, LastStep][stepCount];
+
+  function upStepCount() {
+    return setStepCount(stepCount + 1);
+  }
+
+  function downStepCount() {
+    return setStepCount(stepCount - 1);
+  }
 
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-[#F4F4F4]">
@@ -16,7 +23,11 @@ export default function Home() {
           <Header></Header>
           <CurrentStep />
         </div>
-        <Footer />
+        <Footer
+          stepCount={stepCount}
+          upStepCount={upStepCount}
+          downStepCount={downStepCount}
+        />
       </div>
     </div>
   );
