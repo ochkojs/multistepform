@@ -1,4 +1,10 @@
-export const InputForm = ({ label, isError, errorMessage, type }) => {
+export const InputForm = ({
+  label,
+  isError,
+  errorMessage,
+  type,
+  placeholder,
+}) => {
   return (
     <div className="">
       <div className="flex flex-col gap-2">
@@ -8,6 +14,7 @@ export const InputForm = ({ label, isError, errorMessage, type }) => {
         </div>
         <input
           type={type}
+          placeholder={placeholder}
           className="w-full p-3 border-1 border-gray-400 outline-none rounded-xl text-4"
         ></input>
         <div>

@@ -7,16 +7,19 @@ export const NameStep = ({}) => {
         label="First name"
         isError={false}
         errorMessage="First name cannot contain special characters or numbers."
+        placeholder="First name"
       />
       <InputForm
         label="Last name"
         isError={false}
         errorMessage="Last name cannot contain special characters or numbers."
+        placeholder="Last name"
       />
       <InputForm
         label="Username"
         isError={false}
         errorMessage="This username is already taken. Please choose another one."
+        placeholder="User name"
       />
     </div>
   );
